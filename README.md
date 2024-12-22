@@ -1,12 +1,6 @@
 # dynamoose-infer-schema-type
 
-Simple typescript app with jest to create a npm library with types
-
-## Installation
-
-```sh
-npx degit https://github.com/TheSmartMonkey/dynamoose-infer-schema-type app
-```
+mongoose InferSchemaType equivalent for dynamoose
 
 ## Getting started
 
@@ -35,33 +29,3 @@ npm run pub
 ```
 
 Ensure you have updated the version in `package.json` and are logged into npm.
-
-## Folder tree
-
-```
-|   .eslintrc.json
-|   .gitignore
-|   .prettierignore
-|   .prettierrc.json
-|   jest.config.ts
-|   LICENSE
-|   main.ts
-|   package-lock.json
-|   package.json
-|   README.md
-|   tsconfig.json
-|
-+---debug
-    +---main.ts
-    +---package-lock.json
-    +---package.json
-|
-+---src
-|   +---functions
-        hello.test.ts
-        hello.ts
-    +---libs
-        .gitkeep
-    +---models
-        hello.model.ts
-```

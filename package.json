@@ -1,6 +1,6 @@
 {
   "name": "dynamoose-infer-schema-type",
-  "description": "mongoose InferSchemaType equivalent for dynamoose ",
+  "description": "mongoose InferSchemaType equivalent for dynamoose",
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
