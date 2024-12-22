@@ -1,11 +1,11 @@
-# create-typescript-npm-library
+# dynamoose-infer-schema-type
 
 Simple typescript app with jest to create a npm library with types
 
 ## Installation
 
 ```sh
-npx degit https://github.com/TheSmartMonkey/create-typescript-npm-library app
+npx degit https://github.com/TheSmartMonkey/dynamoose-infer-schema-type app
 ```
 
 ## Getting started

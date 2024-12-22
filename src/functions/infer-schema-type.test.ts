@@ -1,27 +1,66 @@
-import { describe, expect, test } from '@jest/globals';
-import { httpMessage, inc } from './infer-schema-type';
+import { describe, test } from '@jest/globals';
+import { SchemaDefinition } from 'dynamoose/dist/Schema';
+import { InferSchemaType } from '../functions/infer-schema-type';
 
 describe('hello', () => {
   test('Should increment a number', async () => {
-    // Given
-    const nb = 3;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const todoSchemaDefinition: SchemaDefinition = {
+      id: {
+        type: String,
+        hashKey: true, // Partition key
+        required: true,
+      },
+      title: { type: String, required: true },
+      description: String,
+      completed: { type: Boolean },
+    };
 
-    // When
-    const response = inc(nb);
+    // const todoSchema = new dynamoose.Schema(todoSchemaDefinition, {
+    //   timestamps: {
+    //     createdAt: {
+    //       created_at: {
+    //         type: {
+    //           value: Date,
+    //           settings: {
+    //             storage: 'iso',
+    //           },
+    //         },
+    //       },
+    //     },
+    //     updatedAt: {
+    //       updated: {
+    //         type: {
+    //           value: Date,
+    //           settings: {
+    //             storage: 'seconds',
+    //           },
+    //         },
+    //       },
+    //     },
+    //   },
+    // });
 
-    // Then
-    expect(response).toEqual(4);
-  });
+    // Infer the TypeScript type from the Dynamoose schema definition
+    type TodoType = InferSchemaType<typeof todoSchemaDefinition>;
 
-  test('Should return http message', async () => {
-    // Given
-    const message = 'test message';
+    // Example usage
+    const exampleTodo: TodoType = {
+      id: '123',
+      title: 'Example Todo',
+      description: 'This is an example',
+      completed: false,
+    };
 
-    // When
-    const response = httpMessage(message);
+    // Create a model for the todos table
+    // const Todo = dynamoose.model<TodoType & Item>('todos', todoSchema);
 
-    // Then
-    expect(response.code).toEqual(200);
-    expect(response.message).toEqual(message);
+    // async function getAllTodos(): Promise<string> {
+    //   // Fetch all todos from the DynamoDB table
+    //   const todos = await Todo.scan().exec();
+    //   return todos[0].title;
+    // }
+    // getAllTodos();
+    expect(exampleTodo.description).toBe('This is an example');
   });
 });

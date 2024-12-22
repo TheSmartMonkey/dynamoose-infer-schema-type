@@ -1,6 +1,6 @@
 {
-  "name": "create-typescript-npm-library",
-  "description": "Simple typescript app with jest to create a npm library with types",
+  "name": "dynamoose-infer-schema-type",
+  "description": "mongoose InferSchemaType equivalent for dynamoose ",
   "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,6 +15,9 @@
     "format:check": "npx prettier --check .",
     "test": "jest",
     "pub": "npm run build && npm version patch && npm publish"
+  },
+  "dependencies": {
+    "dynamoose": "^4.0.2"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
@@ -34,16 +37,13 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheSmartMonkey/create-typescript-npm-library/issues"
+    "url": "https://github.com/TheSmartMonkey/dynamoose-infer-schema-type/issues"
   },
-  "homepage": "https://github.com/TheSmartMonkey/create-typescript-npm-library#readme",
+  "homepage": "https://github.com/TheSmartMonkey/dynamoose-infer-schema-type#readme",
   "keywords": [
     "npm",
     "library",
-    "template",
+    "dynamoose",
     "typescript"
-  ],
-  "dependencies": {
-    "dynamoose": "^4.0.2"
-  }
+  ]
 }

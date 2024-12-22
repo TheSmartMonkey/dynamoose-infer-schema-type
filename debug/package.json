@@ -4,6 +4,7 @@
     "start": "npx ts-node main.ts"
   },
   "dependencies": {
-    "create-typescript-npm-library": "file:../dist"
+    "dynamoose-infer-schema-type": "file:../dist",
+    "dynamoose": "^4.0.2"
   }
 }
