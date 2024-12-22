@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { httpMessage, inc } from './hello';
+import { httpMessage, inc } from './infer-schema-type';
 
 describe('hello', () => {
   test('Should increment a number', async () => {

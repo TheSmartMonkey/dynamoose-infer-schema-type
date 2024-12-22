@@ -42,5 +42,8 @@
     "library",
     "template",
     "typescript"
-  ]
+  ],
+  "dependencies": {
+    "dynamoose": "^4.0.2"
+  }
 }

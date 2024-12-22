@@ -1,5 +1,5 @@
 // Functions
-export * from '@/functions/hello';
+export * from '@/functions/infer-schema-type';
 
 // Models
-export * from '@/models/hello.model';
+// export * from '@/models/hello.model';
