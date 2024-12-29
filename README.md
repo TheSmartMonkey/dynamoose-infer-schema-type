@@ -1,6 +1,6 @@
 # dynamoose-infer-schema-type
 
-mongoose InferSchemaType equivalent for dynamoose
+mongoose InferSchemaType equivalent for dynamoosetest
 
 ## Getting started
 
